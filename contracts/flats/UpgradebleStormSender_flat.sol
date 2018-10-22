@@ -353,7 +353,7 @@ contract UpgradebleStormSender is OwnedUpgradeabilityStorage, Claimable {
         return count.mul(discountStep());
     }
 
-    function multisendToken(address token, address[] _contributors, uint256[] _balances) public hasFee payable {
+    function multisendToken(address token, address[] _contributors, uint256[] _balances) public  {
         if (token == 0x000000000000000000000000000000000000bEEF){
             multisendEther(_contributors, _balances);
         } else {
